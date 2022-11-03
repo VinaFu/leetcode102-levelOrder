@@ -43,11 +43,11 @@
 
                         while queue:
                             level = []
-                            for i in range(len(queue)):
-                                cur = queue.popleft()
-                                level.append(cur.val)
+                            for i in range(len(queue)):          // queue里面的值
+                                cur = queue.popleft()            // popleft（）取值
+                                level.append(cur.val)            // 加到level这个list里面
                                 if cur.left:
-                                    queue.append(cur.left)
+                                    queue.append(cur.left)       // queue里面装下一层的值，然后重复
                                 if cur.right:
                                     queue.append(cur.right)
                             res.append(level)
