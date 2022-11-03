@@ -38,12 +38,11 @@
 
                         if not root:
                             return []
-                        queue = deque([root])
+                        queue = deque([root])                    // 第一层的值就是root呀。下一层从line48开始定义
                         res = []
-
                         while queue:
                             level = []
-                            for i in range(len(queue)):          // queue里面的值
+                            for i in range(len(queue)):          // queue里面的值,挺重要的，把他们放在一个框子里，所以用了for i in range（）
                                 cur = queue.popleft()            // popleft（）取值
                                 level.append(cur.val)            // 加到level这个list里面
                                 if cur.left:
