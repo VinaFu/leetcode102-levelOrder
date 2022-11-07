@@ -40,7 +40,7 @@
                             return []
                         queue = deque([root])                    // 第一层的值就是root呀。下一层从line48开始定义
                         res = []
-                        while queue:
+                        while queue:                             // 如果queue里面有东西，那么演示一下他和level的关系
                             level = []
                             for i in range(len(queue)):          // queue里面的值,挺重要的，把他们放在一个框子里，所以用了for i in range（）
                                 cur = queue.popleft()            // popleft（）取值
